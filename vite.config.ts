@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
+import { dts } from 'rollup-plugin-dts'
 import { presetUno } from 'unocss'
-import { presetHaixee } from './src'
 import { presetTypography } from 'unocss'
 import unocss from 'unocss/vite'
+
+import { presetHaixee } from './src'
 
 export default defineConfig(({ mode }) => ({
   base: '',

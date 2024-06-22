@@ -11,9 +11,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitAny": false,
-    "outDir": "./dist",
+    "outDir": "dist",
     "declaration": true,
-    "declarationDir": "./dist",
+    "declarationDir": "dist",
     "emitDeclarationOnly": true,
     "paths": {
       "unocss-preset-haixee": [
@@ -22,12 +22,8 @@
     }
   },
   "include": [
-    "./src/**/*.ts",
-    "./tests/**/*"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "src/**/*",
+    "tests/**/*",
+    "vite.config.ts"
   ]
 }

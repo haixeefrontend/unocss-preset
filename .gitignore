@@ -1,3 +1,5 @@
+node_modules/
+
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -11,3 +13,6 @@
 
 #!.yarn/cache
 .pnp.*
+
+# Build
+dist/

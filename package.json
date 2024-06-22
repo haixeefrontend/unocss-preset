@@ -1,7 +1,7 @@
 {
   "name": "unocss-preset-haixee",
   "version": "0.0.1",
-  "description": "Haixee Frontend Team opinionated UnoCSS presets",
+  "description": "Haixee Frontend Team Opinionated UnoCSS Presets",
   "packageManager": "yarn@4.3.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -38,12 +38,13 @@
   ],
   "devDependencies": {
     "@types/node": "^20.14.7",
-    "typescript": "^5.5.2",
-    "unocss": "^0.50.0",
-    "vite": "^5.3.1",
-    "vite-plugin-dts": "^3.9.1"
+    "rollup": "^4.13.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "typescript": "~5.4.5",
+    "unocss": "^0.58.0",
+    "vite": "^5.3.1"
   },
   "peerDependencies": {
-    "unocss": "^0.50.0"
+    "unocss": "^0.58.0"
   }
 }
