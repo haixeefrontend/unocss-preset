@@ -962,7 +962,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unocss/preset-mini@npm:0.58.9":
+"@unocss/preset-mini@npm:0.58.9, @unocss/preset-mini@npm:^0.58.0":
   version: 0.58.9
   resolution: "@unocss/preset-mini@npm:0.58.9"
   dependencies:
@@ -2824,15 +2824,27 @@ __metadata:
   resolution: "unocss-preset-haixee@workspace:."
   dependencies:
     "@types/node": "npm:^20.14.7"
+    "@unocss/preset-mini": "npm:^0.58.0"
     rollup: "npm:^4.13.0"
     rollup-plugin-dts: "npm:^6.1.1"
     typescript: "npm:~5.4.5"
     unocss: "npm:^0.58.0"
+    unocss-preset-marumaru: "npm:^0.0.9"
     vite: "npm:^5.3.1"
   peerDependencies:
     unocss: ^0.58.0
   languageName: unknown
   linkType: soft
+
+"unocss-preset-marumaru@npm:^0.0.9":
+  version: 0.0.9
+  resolution: "unocss-preset-marumaru@npm:0.0.9"
+  peerDependencies:
+    "@unocss/preset-mini": ^0.60.0
+    unocss: ^0.60.0
+  checksum: 10/b674199fe631f940491a6501a09d62dc5e02189d7113a21ac3bd97eb46144c4edba45becb73c5233f63c438824388f783c712cf145df7eb1bb713a958597540f
+  languageName: node
+  linkType: hard
 
 "unocss@npm:^0.58.0":
   version: 0.58.9
