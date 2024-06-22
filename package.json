@@ -1,4 +1,49 @@
 {
   "name": "unocss-preset-haixee",
-  "packageManager": "yarn@4.3.0"
+  "version": "0.0.1",
+  "description": "Haixee Frontend Team opinionated UnoCSS presets",
+  "packageManager": "yarn@4.3.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "author": {
+    "name": "Maiko Tan",
+    "email": "maiko.tan.coding@gmail.com",
+    "url": "https://github.com/MaikoTan"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haixeefrontend/unocss-preset.git"
+  },
+  "bugs": {
+    "url": "https://github.com/haixeefrontend/unocss-preset/issues"
+  },
+  "homepage": "https://haixeefrontend.github.io/unocss-preset/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:demo": "vite build --mode demo",
+    "prepublishOnly": "yarn build"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.14.7",
+    "typescript": "^5.5.2",
+    "unocss": "^0.50.0",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1"
+  },
+  "peerDependencies": {
+    "unocss": "^0.50.0"
+  }
 }
