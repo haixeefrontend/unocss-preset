@@ -38,3 +38,5 @@ export const presetHaixee = (): Preset => {
 
   return mergeDeep(presetMarumaru(), preset, true)
 }
+
+export default presetHaixee

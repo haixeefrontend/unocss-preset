@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import { dts } from 'rollup-plugin-dts'
+import dts from 'vite-plugin-dts'
 import { presetUno } from 'unocss'
 import { presetTypography } from 'unocss'
 import unocss from 'unocss/vite'
@@ -9,7 +9,9 @@ import { presetHaixee } from './src'
 export default defineConfig(({ mode }) => ({
   base: '',
   plugins: [
-    dts(),
+    dts({
+      include: 'src',
+    }),
     unocss({
       presets: [
         presetUno(),
@@ -42,7 +44,7 @@ export default defineConfig(({ mode }) => ({
             fileName: () => 'index.js',
           },
     rollupOptions: {
-      external: ['unocss', /^@unocss/],
+      external: ['unocss', /^@unocss/, 'unocss-preset-marumaru'],
     },
   },
 }))
