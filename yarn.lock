@@ -563,6 +563,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@haixee/unocss-preset@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@haixee/unocss-preset@workspace:."
+  dependencies:
+    "@types/node": "npm:^20.14.7"
+    "@unocss/preset-mini": "npm:^0.58.0"
+    typescript: "npm:~5.4.5"
+    unocss: "npm:^0.58.0"
+    unocss-preset-marumaru: "npm:^0.0.9"
+    vite: "npm:^5.3.1"
+    vite-plugin-dts: "npm:^3.9.1"
+  peerDependencies:
+    unocss: ^0.58.0
+  languageName: unknown
+  linkType: soft
+
 "@iconify/types@npm:^2.0.0":
   version: 2.0.0
   resolution: "@iconify/types@npm:2.0.0"
@@ -3358,22 +3374,6 @@ __metadata:
   checksum: 10/40cdc60f6e61070fe658ca36016a8f4ec216b29bf04a55dce14e3710cc84c7448538ef4dad3728d0bfe29975ccd7bfb5f414c45e7b78883567fb31b246f02dff
   languageName: node
   linkType: hard
-
-"unocss-preset-haixee@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "unocss-preset-haixee@workspace:."
-  dependencies:
-    "@types/node": "npm:^20.14.7"
-    "@unocss/preset-mini": "npm:^0.58.0"
-    typescript: "npm:~5.4.5"
-    unocss: "npm:^0.58.0"
-    unocss-preset-marumaru: "npm:^0.0.9"
-    vite: "npm:^5.3.1"
-    vite-plugin-dts: "npm:^3.9.1"
-  peerDependencies:
-    unocss: ^0.58.0
-  languageName: unknown
-  linkType: soft
 
 "unocss-preset-marumaru@npm:^0.0.9":
   version: 0.0.9
