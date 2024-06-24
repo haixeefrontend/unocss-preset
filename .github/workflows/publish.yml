@@ -40,8 +40,20 @@ jobs:
           yarn build
 
       - name: Publish
+        id: publish
         uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
           provenance: true
           access: public
+
+      - name: GitHub Release
+        # ${{ steps.publish.outputs.type }} would be empty if the package was not published
+        # See https://github.com/JS-DevTools/npm-publish for more information
+        if: ${{ steps.publish.outputs.type }}
+        run: |
+          yarn pack --out '@haixee__unocss-preset.tgz'
+          gh release create ${{ steps.publish.outputs.version }} \
+            --title "v${{ steps.publish.outputs.version }}" \
+            --generate-notes \
+            '@haixee__unocss-preset.tgz'
