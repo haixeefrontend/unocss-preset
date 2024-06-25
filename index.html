@@ -4,10 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://unpkg.com/vue@3.4.27/dist/vue.global.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3.4.27/dist/vue.runtime.esm-browser.prod.js"
+        }
+      }
+    </script>
   </head>
-  <body>
-    <div id="app"><!-- app-html --></div>
+  <body class="bg-white font-sans m-0 py-6 px-4 antialiased prose max-w-100ch mx-auto">
+    <main class="mx-auto text-base">
+      <div id="readme"><!-- app-readme --></div>
+      <div id="app"><!-- app-html --></div>
+    </main>
     <script type="module" src="docs/entry-client.ts"></script>
   </body>
 </html>
