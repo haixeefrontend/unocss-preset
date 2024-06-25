@@ -1,11 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "marked": "https://esm.sh/marked?bundle",
+          "vue": "https://unpkg.com/vue@3.4.27/dist/vue.runtime.esm-browser.prod.js"
+        }
+      }
+    </script>
+    <script type="module" crossorigin="" src="/assets/index-11IUkQsh.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-BUA3m00G.css">
   </head>
-  <body>
-    <div id="app"></div>
-  </body>
-</html>
+  <body class="bg-white font-sans m-0 py-6 px-4 antialiased prose max-w-100ch mx-auto">
+    <main class="mx-auto text-base">
+      <div id="readme"><h1>unocss-preset-haixee</h1>
+<p>A preset for UnoCSS, tailored for our company's needs.</p>
+<h2>Installation</h2>
+<pre class="shiki material-theme-palenight" style="background-color:#292D3E;color:#babed8" tabindex="0"><code><span class="line"><span style="color:#FFCB6B">yarn</span><span style="color:#C3E88D"> add</span><span style="color:#C3E88D"> -D</span><span style="color:#C3E88D"> unocss</span><span style="color:#C3E88D"> @haixee/unocss-preset</span></span>
+<span class="line"></span></code></pre>
+<pre class="shiki material-theme-palenight" style="background-color:#292D3E;color:#babed8" tabindex="0"><code><span class="line"><span style="color:#FFCB6B">npm</span><span style="color:#C3E88D"> install</span><span style="color:#C3E88D"> --save-dev</span><span style="color:#C3E88D"> unocss</span><span style="color:#C3E88D"> @haixee/unocss-preset</span></span>
+<span class="line"></span></code></pre>
+<h2>Usage</h2>
+<p>Import the preset in your <code>uno.config.*</code> files (e.g. <code>uno.config.ts</code>):</p>
+<pre class="shiki material-theme-palenight" style="background-color:#292D3E;color:#babed8" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic">import</span><span style="color:#89DDFF"> {</span><span style="color:#BABED8"> presetHaixee</span><span style="color:#89DDFF"> }</span><span style="color:#89DDFF;font-style:italic"> from</span><span style="color:#89DDFF"> '</span><span style="color:#C3E88D">@haixee/unocss-preset</span><span style="color:#89DDFF">'</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">import</span><span style="color:#89DDFF"> {</span><span style="color:#BABED8"> defineConfig</span><span style="color:#89DDFF">,</span><span style="color:#BABED8"> presetUno</span><span style="color:#89DDFF"> }</span><span style="color:#89DDFF;font-style:italic"> from</span><span style="color:#89DDFF"> '</span><span style="color:#C3E88D">unocss</span><span style="color:#89DDFF">'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">export</span><span style="color:#89DDFF;font-style:italic"> default</span><span style="color:#82AAFF"> defineConfig</span><span style="color:#BABED8">(</span><span style="color:#89DDFF">{</span></span>
+<span class="line"><span style="color:#F07178">  presets</span><span style="color:#89DDFF">:</span><span style="color:#BABED8"> [</span></span>
+<span class="line"><span style="color:#82AAFF">    presetUno</span><span style="color:#BABED8">()</span><span style="color:#89DDFF">,</span><span style="color:#676E95;font-style:italic">  // Or other official presets</span></span>
+<span class="line"><span style="color:#82AAFF">    presetHaixee</span><span style="color:#BABED8">()</span><span style="color:#89DDFF">,</span></span>
+<span class="line"><span style="color:#BABED8">  ]</span><span style="color:#89DDFF">,</span></span>
+<span class="line"><span style="color:#89DDFF">}</span><span style="color:#BABED8">)</span></span>
+<span class="line"></span></code></pre>
+<h2>CSS Classes</h2>
+<div class="hidden">
+
+<p>Please refer to the <a href="https://haixeefrontend.github.io/unocss-preset-haixee">official documentation</a> for the list of available CSS classes.</p>
+</div>
+</div>
+      <div id="app"><!--[--><!--[--><h4>Size</h4><p></p><p>Define size of an element using the <code>size-{value}</code> class.
+For example, <code>size-4</code> or <code>size-10%</code> can be used to set the width and height
+of an element to 1rem and 10% respectively.</p>
+<p></p><!--[--><div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4"><!--[--><!--[--><div class="flex flex-col items-center"><!--[--><code class="!ws-normal before:-ml-1ch">size-10</code><!--]--><!--[--><div class="mb-4 b-1 b-black b-solid br-1 size-10"></div><!--]--></div><div class="flex flex-col items-center"><!--[--><code class="!ws-normal before:-ml-1ch">size-2rem</code><!--]--><!--[--><div class="mb-4 b-1 b-black b-solid br-1 size-2rem"></div><!--]--></div><div class="flex flex-col items-center"><!--[--><code class="!ws-normal before:-ml-1ch">size-5vh</code><!--]--><!--[--><div class="mb-4 b-1 b-black b-solid br-1 size-5vh"></div><!--]--></div><div class="flex flex-col items-center"><!--[--><code class="!ws-normal before:-ml-1ch">size-20%</code><!--]--><!--[--><div class="mb-4 b-1 b-black b-solid br-1 size-20%"></div><!--]--></div><!--]--><!--]--></div><!--]--><!--]--><!--]--></div>
+    </main>
+  
+
+</body></html>
