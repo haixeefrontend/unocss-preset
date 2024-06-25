@@ -1,6 +1,6 @@
 {
   "name": "@haixee/unocss-preset",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Haixee Frontend Team Opinionated UnoCSS Presets",
   "packageManager": "yarn@4.3.0",
   "main": "dist/index.js",
