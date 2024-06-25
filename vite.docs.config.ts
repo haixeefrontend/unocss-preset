@@ -7,6 +7,7 @@ import { defineConfig } from 'vite'
 import { presetHaixee } from './src'
 
 export default defineConfig({
+  base: '',
   plugins: [
     vue(),
     vueJsx(),
