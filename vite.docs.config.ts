@@ -33,7 +33,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'marked'],
       output: {
         globals: {
           vue: 'Vue',

@@ -1,5 +1,6 @@
 import { createApp } from './main'
 
-const { app } = createApp()
-
-app.mount('#app')
+if (import.meta.env.DEV) {
+  const { app } = createApp()
+  app.mount('#app')
+}
