@@ -19,11 +19,15 @@
       "unocss-preset-haixee": [
         "./src"
       ]
-    }
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "vue"
   },
   "include": [
+    "docs/**/*",
     "src/**/*",
     "tests/**/*",
+    "vite.docs.config.ts",
     "vite.config.ts"
   ]
 }
