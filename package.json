@@ -37,7 +37,7 @@
     "dist"
   ],
   "dependencies": {
-    "unocss-preset-marumaru": "^0.0.9"
+    "unocss-preset-marumaru": "^0.0.10"
   },
   "devDependencies": {
     "@types/node": "^20.14.7",

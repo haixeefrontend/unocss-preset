@@ -571,7 +571,7 @@ __metadata:
     "@unocss/preset-mini": "npm:^0.58.0"
     typescript: "npm:~5.4.5"
     unocss: "npm:^0.58.0"
-    unocss-preset-marumaru: "npm:^0.0.9"
+    unocss-preset-marumaru: "npm:^0.0.10"
     vite: "npm:^5.3.1"
     vite-plugin-dts: "npm:^3.9.1"
   peerDependencies:
@@ -3375,13 +3375,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unocss-preset-marumaru@npm:^0.0.9":
-  version: 0.0.9
-  resolution: "unocss-preset-marumaru@npm:0.0.9"
+"unocss-preset-marumaru@npm:^0.0.10":
+  version: 0.0.10
+  resolution: "unocss-preset-marumaru@npm:0.0.10"
   peerDependencies:
     "@unocss/preset-mini": ^0.60.0
     unocss: ^0.60.0
-  checksum: 10/b674199fe631f940491a6501a09d62dc5e02189d7113a21ac3bd97eb46144c4edba45becb73c5233f63c438824388f783c712cf145df7eb1bb713a958597540f
+  checksum: 10/5ed1b7eb2fbef0cee7d276eb60c6d30921f9787d51ce0fd99129f38fecc4522e05f924a8b7ab17e8dd262ac04ce53eb7e67620b2e622e5c993f86e7a459ed6fd
   languageName: node
   linkType: hard
 
