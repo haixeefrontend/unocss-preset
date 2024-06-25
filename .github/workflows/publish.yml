@@ -57,3 +57,5 @@ jobs:
             --title "v${{ steps.publish.outputs.version }}" \
             --generate-notes \
             '@haixee__unocss-preset.tgz'
+        env:
+          GH_TOKEN: ${{ github.token }}
