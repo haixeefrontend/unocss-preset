@@ -41,12 +41,12 @@
     "dist"
   ],
   "dependencies": {
+    "@unocss/preset-mini": "^0.58.0",
     "unocss-preset-marumaru": "^0.0.10"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.7",
     "@types/node": "^20.14.7",
-    "@unocss/preset-mini": "^0.58.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "jsdom": "^24.1.0",
