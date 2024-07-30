@@ -17,8 +17,8 @@ export const presetHaixee = (): Preset => {
       },
     ],
     rules: [
-      [/^col-gap-(.+)$/, ([, value]) => ({ 'column-gap': `${parseValue(value)}px` })],
-      [/^row-gap-(.+)$/, ([, value]) => ({ 'row-gap': `${parseValue(value)}px` })],
+      [/^col-gap-(.+)$/, ([, value]) => ({ 'column-gap': parseValue(value) })],
+      [/^row-gap-(.+)$/, ([, value]) => ({ 'row-gap': parseValue(value) })],
       // square size
       [/^size-(.+)$/, ([, value]) => ({ width: parseValue(value), height: parseValue(value) })],
     ],
