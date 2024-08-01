@@ -2,7 +2,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { presetTypography, presetUno } from 'unocss'
 import unocss from 'unocss/vite'
-import { defineConfig } from 'vite'
+import { Plugin, defineConfig } from 'vite'
 
 import { presetHaixee } from './src'
 
@@ -28,9 +28,19 @@ export default defineConfig({
             },
           },
         }),
-        presetHaixee(),
+        presetHaixee({ responsive: { enabled: true, breakpoints: {
+          xl: 900,
+        } } }),
       ],
     }),
+    (function (): Plugin {
+      return {
+        name: 'transform-index-html',
+        async transformIndexHtml(html, ctx) {
+          return (await ctx.server?.ssrLoadModule('./docs/renderer.js'))?.render(html) || html
+        },
+      }
+    })(),
   ],
   build: {
     rollupOptions: {

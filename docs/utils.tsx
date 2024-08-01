@@ -4,23 +4,31 @@
 //
 // hidden
 import { marked } from 'marked'
+import { defineComponent, h } from 'vue'
 
 import type { FunctionalComponent } from 'vue'
 
-export const Marked = ({ value }: { value: string }) => (
-  <p innerHTML={marked.parse(value, { async: false }) as string} />
-)
+// For some weird reason, the innerHTML property is only usable
+// when using h() function to create an element, not working in JSX.
+export const Marked = defineComponent({
+  props: { value: String },
+  render(props) {
+    return h('div', {
+      innerHTML: marked.parse(props.value) as string,
+    })
+  }
+})
 
 export const Showcase: FunctionalComponent<{ title: string; description: string }> = (
   { title, description },
   { slots },
 ) => {
   return (
-    <>
+    <div>
       <h4>{title}</h4>
       <Marked value={description} />
       {slots.default?.()}
-    </>
+    </div>
   )
 }
 

@@ -6,7 +6,42 @@ import type { Preset } from 'unocss'
 
 const parseValue = (value: string) => h.bracket.cssvar.global.rem(value)
 
-export const presetHaixee = (): Preset => {
+export interface Config {
+  responsive?:
+    | boolean
+    | {
+        enabled?: boolean
+        breakpoints?: {
+          'sm'?: number | 'full'
+          'md'?: number | 'full'
+          'lg'?: number | 'full'
+          'xl'?: number | 'full'
+          '2xl'?: number | 'full'
+          '3xl'?: number | 'full'
+          '4xl'?: number | 'full'
+        }
+      }
+}
+
+export const presetHaixee = (config?: Config): Preset => {
+  let responsive = ''
+  if (
+    config?.responsive === true ||
+    (typeof config?.responsive === 'object' && config?.responsive?.enabled === true && !config?.responsive.breakpoints)
+  ) {
+    responsive = 'mx-auto w-full sm:max-w-inherit md:max-w-inherit xl:max-w-900px 2xl:max-w-1200px 4xl:max-w-1600px'
+  } else if (typeof config?.responsive === 'object' && config.responsive.breakpoints) {
+    const { breakpoints } = config.responsive
+    responsive = 'mx-auto w-full' + Object.entries(breakpoints)
+      .map(([key, value]) => {
+        if (value === 'full') {
+          return `max-w-inherit ${key}:max-w-inherit`
+        }
+        return `max-w-${value}px ${key}:max-w-${value}px`
+      })
+      .join(' ')
+  }
+
   const preset: Preset = {
     name: 'haixee',
     shortcuts: [
@@ -14,6 +49,7 @@ export const presetHaixee = (): Preset => {
         'inset-center': 'inset-center-x inset-center-y',
         'inset-center-x': 'left-1/2 translate-x--1/2',
         'inset-center-y': 'top-1/2 translate-y--1/2',
+        ...(responsive ? { responsive } : {}),
       },
     ],
     rules: [
