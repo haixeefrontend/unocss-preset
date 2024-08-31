@@ -7,6 +7,7 @@ import type { Preset } from 'unocss'
 const parseValue = (value: string) => h.bracket.cssvar.global.rem(value)
 
 export interface Config {
+  elementPlus?: boolean
   responsive?:
     | boolean
     | {
@@ -23,6 +24,15 @@ export interface Config {
       }
 }
 
+const elementPlusColors = ['primary', 'success', 'warning', 'danger', 'info']
+  .map((i) =>
+    [3, 5, 7, 8, 9]
+      .map((n) => `${i}-light-${n}`)
+      .concat([`${i}-dark-2`])
+      .concat([i]),
+  )
+  .flat()
+
 export const presetHaixee = (config?: Config): Preset => {
   let responsive = ''
   if (
@@ -32,18 +42,25 @@ export const presetHaixee = (config?: Config): Preset => {
     responsive = 'mx-auto w-full sm:max-w-inherit md:max-w-inherit xl:max-w-900px 2xl:max-w-1200px 4xl:max-w-1600px'
   } else if (typeof config?.responsive === 'object' && config.responsive.breakpoints) {
     const { breakpoints } = config.responsive
-    responsive = 'mx-auto w-full' + Object.entries(breakpoints)
-      .map(([key, value]) => {
-        if (value === 'full') {
-          return `max-w-inherit ${key}:max-w-inherit`
-        }
-        return `max-w-${value}px ${key}:max-w-${value}px`
-      })
-      .join(' ')
+    responsive =
+      'mx-auto w-full' +
+      Object.entries(breakpoints)
+        .map(([key, value]) => {
+          if (value === 'full') {
+            return `max-w-inherit ${key}:max-w-inherit`
+          }
+          return `max-w-${value}px ${key}:max-w-${value}px`
+        })
+        .join(' ')
   }
 
   const preset: Preset = {
     name: 'haixee',
+    theme: {
+      colors: {
+        ...(config?.elementPlus ? Object.fromEntries(elementPlusColors.map((i) => [i, `var(--el-color-${i})`])) : {}),
+      },
+    },
     shortcuts: [
       {
         'inset-center': 'inset-center-x inset-center-y',
