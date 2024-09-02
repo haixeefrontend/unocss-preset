@@ -7,7 +7,7 @@ import shikiTheme from 'shiki/themes/material-theme-palenight.mjs'
 
 export async function render(/** @type {string} */ html) {
   const readme = await marked.parse(readFileSync('README.md', 'utf-8'))
-  const { render: inner } = await import('./entry-server.ts')
+  const { render: inner } = await import('./.vite/entry-server.js')
   const [appHtml] = await inner()
 
   const replaced = html
