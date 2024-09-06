@@ -1,7 +1,42 @@
-import { Showcase, ShowcaseItem, ShowcaseRow } from './utils'
+import { Marked, Showcase, ShowcaseItem, ShowcaseRow } from './utils'
 
 const App = () => (
   <>
+    <div>
+      <Marked
+        value={`> This preset includes an other preset called [marumaru](https://www.npmjs.com/package/unocss-preset-marumaru), you can refer to its [document](https://maikotan.github.io/unocss-preset-marumaru/#app) for more classes that can be used.`}
+      />
+    </div>
+    <Showcase
+      title='Responsive'
+      description={`Responsive classes can be enabled by setting the \`responsive\` option to true.
+You can simply set \`responsive: true\` to use the default breakpoints.
+
+\`\`\`ts
+const config: Config = {
+  responsive: true,  // Enable responsive classes
+}
+
+
+The breakpoints can also be customized by setting the \`breakpoints\` option.
+For example, to enable responsive classes with custom breakpoints:
+\`\`\`ts
+const config: Config = {
+  responsive: {
+    enabled: true,  // Enable responsive classes
+    breakpoints: {
+      'sm': 640,     // Enable responsive classes from 640px
+      'md': 768,     // Enable responsive classes from 768px
+      'lg': 1024,    // Enable responsive classes from 1024px
+      'xl': 1280,    // Enable responsive classes from 1280px
+    },
+  },
+}
+\`\`\`
+`}
+    >
+      <div></div>
+    </Showcase>
     <Showcase
       title='Size'
       description={`Define size of an element using the \`size-{value}\` class.

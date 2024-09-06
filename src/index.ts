@@ -71,16 +71,15 @@ export const presetHaixee = (config?: Config): Preset => {
     responsive = 'mx-auto w-full sm:max-w-inherit md:max-w-inherit xl:max-w-900px 2xl:max-w-1200px 4xl:max-w-1600px'
   } else if (typeof config?.responsive === 'object' && config.responsive.breakpoints) {
     const { breakpoints } = config.responsive
-    responsive =
-      'mx-auto w-full' +
-      Object.entries(breakpoints)
-        .map(([key, value]) => {
-          if (value === 'full') {
-            return `max-w-inherit ${key}:max-w-inherit`
-          }
-          return `max-w-${value}px ${key}:max-w-${value}px`
-        })
-        .join(' ')
+    responsive = [
+      'mx-auto w-full',
+      ...Object.entries(breakpoints).map(([key, value]) => {
+        if (value === 'full') {
+          return `max-w-inherit ${key}:max-w-inherit`
+        }
+        return `max-w-${value}px ${key}:max-w-${value}px`
+      }),
+    ].join(' ')
   }
 
   const preset: Preset = {

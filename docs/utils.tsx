@@ -14,7 +14,7 @@ export const Marked = defineComponent({
   props: { value: String },
   render(props) {
     return h('div', {
-      innerHTML: marked.parse(props.value) as string,
+      innerHTML: marked(props.value, { async: false }) as string,
     })
   }
 })
