@@ -11,8 +11,8 @@
         }
       }
     </script>
-    <script type="module" crossorigin="" src="./assets/index-DT_rHuw8.js"></script>
-    <link rel="stylesheet" crossorigin="" href="./assets/index-B0OAvS-P.css">
+    <script type="module" crossorigin="" src="./assets/index-B1AyhbLI.js"></script>
+    <link rel="stylesheet" crossorigin="" href="./assets/index-CGfT23YJ.css">
   </head>
   <body class="bg-white font-sans m-0 py-6 px-4 antialiased">
     <main class="responsive! text-base prose">
@@ -41,7 +41,32 @@
 <p>Please refer to the <a href="https://haixeefrontend.github.io/unocss-preset-haixee">official documentation</a> for the list of available CSS classes.</p>
 </div>
 </div>
-      <div id="app"><!--[--><div><h4>Size</h4><div><p>Define size of an element using the <code>size-{value}</code> class.
+      <div id="app"><!--[--><div><div><blockquote>
+<p>This preset includes an other preset called <a href="https://www.npmjs.com/package/unocss-preset-marumaru">marumaru</a>, you can refer to its <a href="https://maikotan.github.io/unocss-preset-marumaru/#app">document</a> for more classes that can be used.</p>
+</blockquote>
+</div></div><div><h4>Responsive</h4><div><p>Responsive classes can be enabled by setting the <code>responsive</code> option to true.
+You can simply set <code>responsive: true</code> to use the default breakpoints.</p>
+<pre class="shiki material-theme-palenight" style="background-color:#292D3E;color:#babed8" tabindex="0"><code><span class="line"><span style="color:#C792EA">const</span><span style="color:#BABED8"> config</span><span style="color:#89DDFF">:</span><span style="color:#FFCB6B"> Config</span><span style="color:#89DDFF"> =</span><span style="color:#89DDFF"> {</span></span>
+<span class="line"><span style="color:#F07178">  responsive</span><span style="color:#89DDFF">:</span><span style="color:#FF9CAC"> true</span><span style="color:#89DDFF">,</span><span style="color:#676E95;font-style:italic">  // Enable responsive classes</span></span>
+<span class="line"><span style="color:#89DDFF">}</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#BABED8">The breakpoints can also be customized by setting the </span><span style="color:#89DDFF">`</span><span style="color:#C3E88D">breakpoints</span><span style="color:#89DDFF">`</span><span style="color:#BABED8"> option</span><span style="color:#89DDFF">.</span></span>
+<span class="line"><span style="color:#BABED8">For example</span><span style="color:#89DDFF">,</span><span style="color:#BABED8"> to enable responsive classes </span><span style="color:#89DDFF;font-style:italic">with</span><span style="color:#BABED8"> custom </span><span style="color:#FFCB6B">breakpoints</span><span style="color:#89DDFF">:</span></span>
+<span class="line"><span style="color:#89DDFF">```</span><span style="color:#C3E88D">ts</span></span>
+<span class="line"><span style="color:#C3E88D">const config: Config = {</span></span>
+<span class="line"><span style="color:#C3E88D">  responsive: {</span></span>
+<span class="line"><span style="color:#C3E88D">    enabled: true,  // Enable responsive classes</span></span>
+<span class="line"><span style="color:#C3E88D">    breakpoints: {</span></span>
+<span class="line"><span style="color:#C3E88D">      'sm': 640,     // Enable responsive classes from 640px</span></span>
+<span class="line"><span style="color:#C3E88D">      'md': 768,     // Enable responsive classes from 768px</span></span>
+<span class="line"><span style="color:#C3E88D">      'lg': 1024,    // Enable responsive classes from 1024px</span></span>
+<span class="line"><span style="color:#C3E88D">      'xl': 1280,    // Enable responsive classes from 1280px</span></span>
+<span class="line"><span style="color:#C3E88D">    },</span></span>
+<span class="line"><span style="color:#C3E88D">  },</span></span>
+<span class="line"><span style="color:#C3E88D">}</span></span>
+<span class="line"></span></code></pre>
+</div><!--[--><div></div><!--]--></div><div><h4>Size</h4><div><p>Define size of an element using the <code>size-{value}</code> class.
 For example, <code>size-4</code> or <code>size-10%</code> can be used to set the width and height
 of an element to 1rem and 10% respectively.</p>
 </div><!--[--><div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4"><!--[--><!--[--><div class="flex flex-col items-center"><!--[--><code class="!ws-normal before:-ml-1ch">size-10</code><!--]--><!--[--><div class="mb-4 b-1 b-black b-solid br-1 size-10"></div><!--]--></div><div class="flex flex-col items-center"><!--[--><code class="!ws-normal before:-ml-1ch">size-2rem</code><!--]--><!--[--><div class="mb-4 b-1 b-black b-solid br-1 size-2rem"></div><!--]--></div><div class="flex flex-col items-center"><!--[--><code class="!ws-normal before:-ml-1ch">size-5vh</code><!--]--><!--[--><div class="mb-4 b-1 b-black b-solid br-1 size-5vh"></div><!--]--></div><div class="flex flex-col items-center"><!--[--><code class="!ws-normal before:-ml-1ch">size-20%</code><!--]--><!--[--><div class="mb-4 b-1 b-black b-solid br-1 size-20%"></div><!--]--></div><!--]--><!--]--></div><!--]--></div><div><h4>Inset Center</h4><div><p>Center an element horizontally, vertically, or both using the
