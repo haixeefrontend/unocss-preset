@@ -87,7 +87,9 @@ export const presetHaixee = (config?: Config): Preset => {
     name: 'haixee',
     theme: {
       colors: {
-        ...(config?.elementPlus ? Object.fromEntries(elementPlusColors.map((i) => [i, `var(--el-${i})`])) : {}),
+        ...(config?.elementPlus
+          ? Object.fromEntries(elementPlusColors.map((i) => [i.replace(/^color-/, ''), `var(--el-${i})`]))
+          : {}),
       },
     },
     shortcuts: [
