@@ -24,14 +24,43 @@ export interface Config {
       }
 }
 
-const elementPlusColors = ['primary', 'success', 'warning', 'danger', 'info']
-  .map((i) =>
-    [3, 5, 7, 8, 9]
-      .map((n) => `${i}-light-${n}`)
-      .concat([`${i}-dark-2`])
-      .concat([i]),
-  )
-  .flat()
+const elementPlusColors = (() => {
+  const common = ['primary', 'success', 'warning', 'danger', 'info']
+    .map((i) =>
+      [3, 5, 7, 8, 9]
+        .map((n) => `${i}-light-${n}`)
+        .concat([`${i}-dark-2`])
+        .concat([i]),
+    )
+    .flat()
+    .map((i) => `color-${i}`)
+
+  const page = [
+    'bg-color',
+    'bg-color-page',
+    'bg-color-overlay',
+    'text-color-primary',
+    'text-color-regular',
+    'text-color-secondary',
+    'text-color-placeholder',
+    'text-color-disabled',
+    'border-color',
+    'border-color-light',
+    'border-color-lighter',
+    'border-color-extra-light',
+    'border-color-dark',
+    'border-color-darker',
+    'fill-color',
+    'fill-color-light',
+    'fill-color-lighter',
+    'fill-color-extra-light',
+    'fill-color-dark',
+    'fill-color-darker',
+    'fill-color-blank',
+  ]
+
+  return [...common, ...page]
+})()
 
 export const presetHaixee = (config?: Config): Preset => {
   let responsive = ''
@@ -58,7 +87,7 @@ export const presetHaixee = (config?: Config): Preset => {
     name: 'haixee',
     theme: {
       colors: {
-        ...(config?.elementPlus ? Object.fromEntries(elementPlusColors.map((i) => [i, `var(--el-color-${i})`])) : {}),
+        ...(config?.elementPlus ? Object.fromEntries(elementPlusColors.map((i) => [i, `var(--el-${i})`])) : {}),
       },
     },
     shortcuts: [
