@@ -1,6 +1,6 @@
 {
   "name": "@haixee/unocss-preset",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Haixee Frontend Team Opinionated UnoCSS Presets",
   "packageManager": "yarn@4.3.0",
   "main": "dist/index.js",
@@ -42,7 +42,7 @@
   ],
   "dependencies": {
     "@unocss/preset-mini": "^0.58.0",
-    "unocss-preset-marumaru": "^0.0.11"
+    "unocss-preset-marumaru": "^0.0.12"
   },
   "devDependencies": {
     "@types/compression": "^1",

@@ -592,7 +592,7 @@ __metadata:
     shiki: "npm:^1.9.0"
     typescript: "npm:~5.4.5"
     unocss: "npm:^0.58.0"
-    unocss-preset-marumaru: "npm:^0.0.11"
+    unocss-preset-marumaru: "npm:^0.0.12"
     vite: "npm:^5.3.1"
     vite-plugin-dts: "npm:^3.9.1"
     vue: "npm:3.4.27"
@@ -4561,13 +4561,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unocss-preset-marumaru@npm:^0.0.11":
-  version: 0.0.11
-  resolution: "unocss-preset-marumaru@npm:0.0.11"
+"unocss-preset-marumaru@npm:^0.0.12":
+  version: 0.0.12
+  resolution: "unocss-preset-marumaru@npm:0.0.12"
   peerDependencies:
     "@unocss/preset-mini": ^0.60.0
     unocss: ^0.60.0
-  checksum: 10/69e72f982a374122c5f7fdee9371db6e805c595de4ea2adc19d475382953dca581a847059fa2b76ba0289f6949add8b909b3e56af3c879f69e6641e5386c32c9
+  checksum: 10/c6c24c257fc79a1f6b952735a237f91574061d57e11acfd16f43ae44ce653e790d0294acdb86fd42bdebcc497f65231ba017fd6b779ca13e2afba7942a2c2900
   languageName: node
   linkType: hard
 
