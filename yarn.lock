@@ -597,7 +597,7 @@ __metadata:
     vite-plugin-dts: "npm:^3.9.1"
     vue: "npm:3.4.27"
   peerDependencies:
-    unocss: ^0.58.0
+    unocss: ">=0.58.0"
   languageName: unknown
   linkType: soft
 
