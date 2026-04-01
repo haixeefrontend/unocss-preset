@@ -32,6 +32,6 @@ export default defineConfig({
 
 <div class="hidden">
 
-Please refer to the [official documentation](https://haixeefrontend.github.io/unocss-preset-haixee) for the list of available CSS classes.
+Please refer to the [official documentation](https://haixeefrontend.github.io/unocss-preset) for the list of available CSS classes.
 
 </div>
