@@ -32,7 +32,15 @@ jobs:
       #       ${{ runner.os }}-yarn-
 
       - name: Update NPM to latest
-        run: npm install -g npm@latest
+        run: |
+          # npm install to global requires write permissions to `/usr/local`,
+          # which is not available in GitHub Actions runners.
+          # To work around this, we can configure npm to use a different directory for global installations.
+          mkdir -p ~/.npm-global
+          npm config set prefix '~/.npm-global'
+          echo "$HOME/.npm-global/bin" >> $GITHUB_PATH
+          # Now we can install npm globally
+          npm install -g npm@latest
 
       - name: Install Dependencies
         run: |
