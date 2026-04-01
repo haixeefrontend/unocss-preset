@@ -31,6 +31,9 @@ jobs:
       #     restore-keys: |
       #       ${{ runner.os }}-yarn-
 
+      - name: Update NPM to latest
+        run: npm install -g npm@latest
+
       - name: Install Dependencies
         run: |
           corepack enable
@@ -42,9 +45,8 @@ jobs:
 
       - name: Publish
         id: publish
-        uses: JS-DevTools/npm-publish@v3
+        uses: JS-DevTools/npm-publish@v4
         with:
-          token: ${{ secrets.NPM_TOKEN }}
           provenance: true
           access: public
 
